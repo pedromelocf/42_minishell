@@ -204,6 +204,8 @@ void					execute_ast(t_minishell **minishell, bool piped,
 void					get_path(t_minishell **minishell, t_ast *node);
 void					check_redirection(t_minishell **minishell, bool piped,
 							t_ast *node);
+void					check_path_exist(t_minishell **minishell, t_ast *node,
+							char **paths);
 void					exit_check(t_minishell **minishell, t_ast *node);
 void					reset_redirects(bool piped, t_minishell *minishell);
 void					close_fds(int fd1, int fd2);
