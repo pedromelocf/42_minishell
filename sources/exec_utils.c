@@ -59,7 +59,7 @@ void	reset_redirects(bool piped, t_minishell *minishell)
 static void	exit_handler_aux(char *message, char *command,
 		t_minishell **minishell, int exit_status)
 {
-	dprintf(2, message, command);
+	ft_dprintf(2, message, command);
 	clear_minishell(*minishell);
 	exit(exit_status);
 }

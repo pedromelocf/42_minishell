@@ -28,12 +28,12 @@ void	exec_exit(char **command, t_minishell **minishell)
 	{
 		if (arr_len == 2 && isvalid_num(command[1]))
 		{
-			dprintf(1, "exit\n");
+			ft_dprintf(1, "exit\n");
 			status = atoll(command[1]) % 256;
 		}
 		else if (arr_len != 2 && isvalid_num(command[1]))
 		{
-			dprintf(2, ERROR_EXIT_MANY_ARGS);
+			ft_dprintf(2, ERROR_EXIT_MANY_ARGS);
 			status = 1;
 		}
 		else

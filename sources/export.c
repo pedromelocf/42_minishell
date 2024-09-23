@@ -93,7 +93,7 @@ static void	print_env_sorted(char **env)
 	temp[i] = NULL;
 	i = 0;
 	while (temp[i])
-		dprintf(1, "declare -x \"%s\"\n", temp[i++]);
+		ft_dprintf(1, "declare -x \"%s\"\n", temp[i++]);
 	clear_matrix(temp);
 }
 

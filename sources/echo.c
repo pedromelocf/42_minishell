@@ -6,7 +6,7 @@
 /*   By: pmelo-ca <pmelo-ca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 14:07:16 by pmelo-ca          #+#    #+#             */
-/*   Updated: 2024/08/19 17:17:39 by pmelo-ca         ###   ########.fr       */
+/*   Updated: 2024/09/19 13:22:07 by pmelo-ca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ static void	print_args(int i, int arr_len, char **command);
 
 int	exec_echo(char **command)
 {
-	int	arr_len;
-	bool newline;
+	int		arr_len;
+	bool	newline;
 
 	arr_len = get_array_len(command);
 	newline = true;
@@ -32,13 +32,13 @@ static void	print_args(int i, int arr_len, char **command)
 {
 	while (arr_len > i)
 	{
-		dprintf(1, "%s", command[i]);
+		ft_dprintf(1, "%s", command[i]);
 		if (i + 1 != arr_len)
-			dprintf(1, " ");
+			ft_dprintf(1, " ");
 		i++;
 	}
 	if (i == 0)
-		dprintf(1, "\n");
+		ft_dprintf(1, "\n");
 }
 
 static int	check_option_n(char **command, bool *newline)

@@ -30,7 +30,7 @@ int	exec_unset(char **command, char ***env)
 		if (!check_key_unset(command[i]))
 		{
 			exit_status = 1;
-			dprintf(2, ERROR_UNSET_ID, command[i]);
+			ft_dprintf(2, ERROR_UNSET_ID, command[i]);
 		}
 		else
 			new_env = new_env_unset(command[i], *env);
